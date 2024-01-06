@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Sen', sans-serif;
+}
+html, body{
+
+}
+/* -------------COMMON------------ */
+.sen{
+    color: #171100;
+    font-family: Sen;
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.26;
+    letter-spacing: -0.76px;
+}
+a{
+    text-decoration: none;
+}
+#header{
+    background: #FFFCF4;
+    height: 100vh;
+}
+.content{
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    padding-top: 44px;  
+    font-family: Poppins;
+}
+.nav-items{
+    display: flex;
+    align-items: center;
+}
+.nav-items .items{
+    margin: 0 21px;
+}
+.nav-items .items:first-child{
+    margin-left: 512px;
+}
+.nav-items a{
+    color: #5F5B53;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+}
+.nav .cta-btn .cta{
+}
