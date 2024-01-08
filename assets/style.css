@@ -3,6 +3,13 @@
 }
 html{
     font-size: 10px;
+    --desc-color: #5F5B53;
+    --font-desc: Poppins;
+    --title-color: #171100;
+    --font-title: Sen;
+    --hover-btn-color: #FFB900;
+    --btn-color:#171100;
+    --btn-font: Poppins;
 }
 body{
     font-family: 'Poppins', sans-serif;
@@ -13,7 +20,7 @@ html, body{
 }
 /* -------------COMMON------------ */
 .sen{
-    color: #171100;
+    color: var(--sen-color);
     font-family: Sen;
     font-size: 3.8rem;
     font-weight: 700;
@@ -23,36 +30,192 @@ html, body{
 a{
     text-decoration: none;
 }
+.btn{
+    display: inline-block;
+    color: #FFF;
+    font-family: var(--btn-font);
+    font-weight: 600;
+    background: var(--btn-color);
+    border-radius: 25px;
+}
+/* -------------Header------------ */
 #header{
+    min-height: 100vh;
     background: #FFFCF4;
-    height: 100vh;
 }
 .content{
     width: 1170px;
+    max-width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
 }
 .nav{
     display: flex;
     align-items: center;
-    padding-top: 44px;  
-    font-family: Poppins;
+    padding-top: 36px;
 }
-.nav-items{
+.nav ul {
     display: flex;
-    align-items: center;
+    margin-left: auto;
 }
-.nav-items .items{
-    margin: 0 21px;
+.nav li.active a{
+    color: #171100;
+    text-shadow: 1px 0 0 currentColor;
 }
-.nav-items .items:first-child{
-    margin-left: 512px;
+.nav li.active a::after{
+    position: absolute;
+    left: 21px;
+    bottom: 6px;
+    content: "";
+    display: block;
+    width: 12px;
+    height: 2px;
+    border-radius: 1px;
+    background: #171100;
 }
-.nav-items a{
-    color: #5F5B53;
+.nav ul a{
+    position: relative;
+    padding: 8px 21px;
+    color: var(--desc-color);
+    font-family: Poppins;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.75;
 }
-.nav .cta-btn .cta{
+.nav ul a:hover{
+    color: #171100;
+    text-shadow: 1px 0 0 currentColor;
+}
+.nav .sign-up{
+    margin-left: 50px;
+    padding: 16px 40px;
+    font-size: 1.6rem;
+    border-radius: 24.5px;
+}
+/* -------------Hero------------ */
+#header .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 64px;
+}
+.img-card{
+    position: relative;
+    padding-bottom: 65px;
+}
+.hero-img{
+    border-radius: 20px;
+    width: 470px;
+    height: 685px;
+    object-fit: cover;
+}
+.box .card{
+    position: absolute;
+    width: 270px;
+    min-height: 244px;
+    bottom: 48px;
+    right: -100px;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+.box .column{
+    margin: 28px 24px;   
+}
+.box .items{
+    display: flex;
+    align-items: center;
+}
+.box .items:not(.box .items:last-child){
+    margin-bottom: 14px;
+}
+.box .circle{
+    padding: 9px 11px;
+    margin-right: 16px;
+    border-radius: 50%;
+}
+.box .courses-quantity{
+    color: var(--desc-color);
+    font-family: var(--font-desc);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.85;
+}
+.box .courses-name{
+    color: #171100;
+    font-family: var(--font-desc);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.66;
+}
+
+.hero{
+    width: 470px;
+}
+.hero .title{
+    margin-bottom: 22px;
+    font-size: 5.8rem;
+    line-height: 1.17;
+    letter-spacing: -1.16px;
+}
+.hero .desc{
+    color: var(--desc-color);
+    font-family: Poppins;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.66;
+}
+.hero .cta{
+    display: flex;
+    align-items: center;
+    margin-top: 38px;
+    margin-bottom: 48px;
+}
+.hero .see-courses{
+    border-radius: 32px;
+    color: #FFF;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.66;
+    padding: 16px 32px;
+}
+.hero .see-courses:hover{  
+    background: var(--hover-btn-color);
+}
+.hero .cta-play-vid{
+    display: flex;
+    color: #171100;;
+}
+.hero .play-btn{
+    font-size: 14px;
+    padding: 8px 10px;
+    margin: 0 10px 0 28px;
+    border-radius: 50%;
+    background: #FFF;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.hero .cta-play-vid:hover{
+    color: var(--hover-btn-color);
+}
+
+.hero .sub-title{
+    font-family: var(--font-desc);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.66;
+}
+.hero .statistical{
+    display: flex;
+    margin-top: 8px;
+}
+.hero .statistical .desc{
+    margin-right: 28px;
+}
+.hero .statistical strong{
+    color: var(--title-color);
+    margin-right: 14px;
+    font-family: var(--font-title);
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 1.22;
 }
